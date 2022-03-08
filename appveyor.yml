@@ -1,5 +1,7 @@
 version: 1.0.{build}
 image: Visual Studio 2022
+environment:
+  IGNORE_NORMALISATION_GIT_HEAD_MOVE: 1
 before_build:
 - cmd: msbuild /t:Restore GitVersionBug.sln
 build:
